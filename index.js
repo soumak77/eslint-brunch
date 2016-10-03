@@ -48,7 +48,7 @@ class ESLinter {
   }
 
   lint(data, path) {
-    const result = this.linter.executeOnText(data, path).results[0];
+    const result = this.linter.executeOnText(data, path);
     const errorCount = result.errorCount;
     const warningCount = result.warningCount;
     if (errorCount === 0 && warningCount === 0) {
